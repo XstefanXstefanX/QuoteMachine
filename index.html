@@ -9,15 +9,27 @@
     </head>
     <body id="page">
         <div id="quote-box">
-            <h1>Quote of the moment</h1>
-            <blockquote id="quote">Still loading...</blockquote>
-            <span id="author">Wait patiently while it's loading:)</span>
+            <h1>Quote of the day</h1>
+            <blockquote id="quote">Loading...</blockquote>
+            <span id="author">Steve Jobs</span>
             <div class="buttons">
                 <button onclick="tweet()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png?20220821125553" alt="twitter-icon"/>Tweet</button>
-                <button onclick="getquote(api_url)" id="btn">More please!</button>
+                <button onclick="getquote(api_url)" id="btn">New Quote</button>
             </div>
         </div>
 <script>
+    //NEW BACKGROUND ON BUTTON CLICK HANDLER
+    const btn = document.getElementById('btn');
+    const quoteBox = document.getElementById('quote-box');
+    const changeBackground = () => {
+        const quoteBoxColor = Math.floor(Math.random() * 0xffffff).toString(16);
+        const backgroundColor = Math.floor(Math.random() * 0xffffff).toString(16);
+        document.body.style.background = `#${backgroundColor}`;
+        quoteBox.style.backgroundColor = `#${quoteBoxColor}`;
+    }
+    btn.addEventListener('click',changeBackground);
+
+
     //NEW QUOTE HANDLER
     const api_url ='https://api.quotable.io/random';
     const quote = document.getElementById('quote');
