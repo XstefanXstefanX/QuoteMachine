@@ -104,3 +104,36 @@ body{
     color: var(--accent-color)
 
 }
+@media (max-width: 900px){
+    #quote-box{
+        width: 550px;
+    }
+}
+@media (max-width: 700px){
+    #quote-box{
+        width: 500px;
+    }
+    #quote-box h1{
+        font-size: 2.5rem;
+    }
+    #quote-box span{
+        font-size: 1.2rem;
+    }
+    #quote-box blockquote{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 520px){
+    #quote-box{
+        width: 330px;
+    }
+    #quote-box h1{
+        font-size: 2rem;
+    }
+    #quote-box span{
+        font-size: 1rem;
+    }
+    #quote-box blockquote{
+        font-size: 1.3rem;
+    }
+}
